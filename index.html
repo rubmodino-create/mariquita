@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calendario de Adviento</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎄</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Fredoka:wght@400;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="mariquita" viewBox="0 0 40 40">
+      <circle cx="20" cy="9" r="6" fill="#141012"/>
+      <ellipse cx="20" cy="23" rx="14" ry="15" fill="#e3262e"/>
+      <path d="M20 8 V38" stroke="#141012" stroke-width="1.6"/>
+      <circle cx="13" cy="18" r="3" fill="#141012"/>
+      <circle cx="27" cy="18" r="3" fill="#141012"/>
+      <circle cx="12" cy="28" r="2.6" fill="#141012"/>
+      <circle cx="28" cy="28" r="2.6" fill="#141012"/>
+      <circle cx="20" cy="33" r="1.8" fill="#141012"/>
+    </symbol>
+  </svg>
+
+  <div class="nieve" aria-hidden="true"></div>
+
+  <header class="cabecera">
+    <h1>Calendario de Adviento</h1>
+    <p id="subtitulo" class="subtitulo"></p>
+  </header>
+
+  <main>
+    <div id="calendario" class="calendario" aria-label="Puertas del calendario"></div>
+  </main>
+
+  <div id="aviso" class="aviso" role="status" aria-live="polite"></div>
+
+  <dialog id="carta" class="carta">
+    <article class="papel">
+      <button class="cerrar" type="button" aria-label="Cerrar">×</button>
+      <p class="carta-dia" id="carta-dia"></p>
+      <p class="regalo" id="regalo" hidden>
+        <span class="regalo-etiqueta">🎁 Tu regalo de hoy</span>
+        <span class="regalo-nombre" id="regalo-nombre"></span>
+      </p>
+      <div class="carta-texto" id="carta-texto"></div>
+      <svg class="carta-firma" aria-hidden="true"><use href="#mariquita"/></svg>
+    </article>
+  </dialog>
+
+  <script src="cartas.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
